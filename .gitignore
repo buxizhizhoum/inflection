@@ -1,0 +1,7 @@
+.idea
+.idea_modules/
+*.log
+out/
+*/output/
+bin/
+build/
