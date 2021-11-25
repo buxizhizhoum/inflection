@@ -17,7 +17,7 @@ func TestUnderscore(t *testing.T) {
 	for k, v := range testCases {
 		res := inflection.Underscore(k)
 		if res != v {
-			t.Errorf("TestUnderscore Failed, input: %s,output: %s", k, v)
+			t.Errorf("TestUnderscore Failed, input: %s,expected: %s, output: %s", k, v, res)
 		}
 		fmt.Println(res)
 	}
@@ -29,11 +29,12 @@ func TestCamelizeExpectedFirstUpper(t *testing.T) {
 	testCases["a_a"] = "AA"
 	testCases["aa_a"] = "AaA"
 	testCases["aaa"] = "Aaa"
+	testCases["i_love_golang_and_json_so_much"] = "ILoveGolangAndJsonSoMuch"
 
 	for k, v := range testCases {
 		res := inflection.Camelize(k, true)
 		if res != v {
-			t.Errorf("TestCamelize Failed, input: %s,output: %s", k, v)
+			t.Errorf("TestCamelize Failed, input: %s,expected: %s, output: %s", k, v, res)
 		}
 	}
 }
@@ -43,11 +44,12 @@ func TestCamelizeExpectedFirstLower(t *testing.T) {
 	testCases["a_a"] = "aA"
 	testCases["aa_a"] = "aaA"
 	testCases["aaa"] = "aaa"
+	testCases["i_love_golang_and_json_so_much"] = "iLoveGolangAndJsonSoMuch"
 
 	for k, v := range testCases {
 		res := inflection.Camelize(k, false)
 		if res != v {
-			t.Errorf("TestCamelize Failed, input: %s,output: %s", k, v)
+			t.Errorf("TestCamelize Failed, input: %s,expected: %s, output: %s", k, v, res)
 		}
 	}
 }
