@@ -11,11 +11,11 @@ This is an implement of [Inflection](https://github.com/jpvanhal/inflection) pac
         )
 
         func example () {
-        // to convert a string to underscore
-        res := inflection.Underscore("aA")
-        // will return a_a
-        fmt.Println(res)
-        // to convert a string to camelize
-        // will return AA
-        fmt.Println(inflection.Camelize("a_a", true))
+            // to convert a string to underscore
+            res := inflection.Underscore("aA")
+            // will return a_a
+            fmt.Println(res)
+            // to convert a string to camelize
+            // will return AA
+            fmt.Println(inflection.Camelize("a_a", true))
         }
