@@ -1,1 +1,1 @@
-module "inflection"
+module "github.com/buxizhizhoum/inflection"
