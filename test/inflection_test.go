@@ -12,6 +12,7 @@ func TestUnderscore(t *testing.T) {
 	testCases["aaA"] = "aa_a"
 	testCases["aAA"] = "a_aa"
 	testCases["my_case1"] = "my_case1"
+	testCases["ILoveGolangAndJSONSoMuch"] = "i_love_golang_and_json_so_much"
 
 	for k, v := range testCases {
 		res := inflection.Underscore(k)
