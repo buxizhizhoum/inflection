@@ -5,13 +5,17 @@ This is an implement of [Inflection](https://github.com/jpvanhal/inflection) pac
 
 # examples
 
-        import "github.com/buxizhizhoum/inflection"
+        import (
+	        "fmt"
+	        "github.com/buxizhizhoum/inflection"
+        )
+
+        func example () {
         // to convert a string to underscore
         res := inflection.Underscore("aA")
         // will return a_a
         fmt.Println(res)
-        
         // to convert a string to camelize
-        res := inflection.Camelize(a_a, true)
         // will return AA
-        fmt.Println(res)
+        fmt.Println(inflection.Camelize("a_a", true))
+        }
