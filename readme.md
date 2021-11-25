@@ -5,7 +5,7 @@ This is an implement of [Inflection](https://github.com/jpvanhal/inflection) pac
 
 # examples
 
-        import "inflection"
+        import "github.com/buxizhizhoum/inflection"
         // to convert a string to underscore
         res := inflection.Underscore("aA")
         // will return a_a

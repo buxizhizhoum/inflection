@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"inflection"
+	"github.com/buxizhizhoum/inflection"
 	"testing"
 )
 
@@ -11,6 +11,7 @@ func TestUnderscore(t *testing.T) {
 	testCases["aA"] = "a_a"
 	testCases["aaA"] = "aa_a"
 	testCases["aAA"] = "a_aa"
+	testCases["my_case1"] = "my_case1"
 
 	for k, v := range testCases {
 		res := inflection.Underscore(k)
