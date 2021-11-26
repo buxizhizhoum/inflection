@@ -28,6 +28,7 @@ func TestCamelizeExpectedFirstUpper(t *testing.T) {
 	testCases := make(map[string]string)
 	testCases["a_a"] = "AA"
 	testCases["aa_a"] = "AaA"
+	testCases["aa__a"] = "Aa__a"
 	testCases["aaa"] = "Aaa"
 	testCases["i_love_golang_and_json_so_much"] = "ILoveGolangAndJsonSoMuch"
 
