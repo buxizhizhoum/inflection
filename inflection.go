@@ -14,6 +14,9 @@ func Underscore(s string) string {
 }
 
 func Camelize(s string, uppercaseFirstLetter bool) string {
+	if len(s) == 0 {
+		return s
+	}
 	replFunc := func(w string) string {
 		if strings.HasPrefix(w, "_") && !strings.HasPrefix(w, "__"){
 			return strings.ToUpper(w[1:])
