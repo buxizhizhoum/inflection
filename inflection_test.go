@@ -102,6 +102,14 @@ func TestCamelize(t *testing.T) {
 			},
 			want: "ILoveGolangAndJsonSoMuch",
 		},
+		{
+			name: "camelize number",
+			args: args{
+				s:                    "1",
+				uppercaseFirstLetter: false,
+			},
+			want: "1",
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -155,6 +163,11 @@ func TestUnderscore(t *testing.T) {
 			name: "convert to underscore",
 			args: args{s: "ILoveGolangAndJSONSoMuch"},
 			want: "i_love_golang_and_json_so_much",
+		},
+		{
+			name: "convert number",
+			args: args{s: "1"},
+			want: "1",
 		},
 	}
 	for _, tt := range tests {
